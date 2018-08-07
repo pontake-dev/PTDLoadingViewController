@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NLX-sM-DlD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="ftc-Im-81b">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgI-kw-NUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="q79-Ln-avj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="k2P-dG-WfC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1NU-Zx-zaI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0et-ME-W0N" kind="relationship" relationship="rootViewController" id="Xlo-Ca-XOa"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="582" y="155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HVx-ai-Hy2">
+            <objects>
+                <viewController id="0et-ME-W0N" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iLv-OA-6bc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7f1-Jm-R74">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHn-Ee-6pP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                                        <color key="backgroundColor" white="0.93337673610000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="coveringAllScreens"/>
+                                        <connections>
+                                            <action selector="coveringAllScreensButtonTapped:" destination="0et-ME-W0N" eventType="touchUpInside" id="RNX-71-iy1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYe-FA-hus">
+                                        <rect key="frame" x="0.0" y="140" width="375" height="134.5"/>
+                                        <color key="backgroundColor" white="0.93337673610000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="showOnView"/>
+                                        <connections>
+                                            <action selector="showOnViewButtonTapped:" destination="0et-ME-W0N" eventType="touchUpInside" id="rMo-7I-bs2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgc-gW-wHp">
+                                        <rect key="frame" x="0.0" y="279.5" width="375" height="135"/>
+                                        <color key="backgroundColor" white="0.93337673610000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="cancelableCoveringAllScreens"/>
+                                        <connections>
+                                            <action selector="cancelableCoveringAllScreensButtonTapped:" destination="0et-ME-W0N" eventType="touchUpInside" id="mM4-QI-Hfk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tb-bn-V7Y">
+                                        <rect key="frame" x="0.0" y="419.5" width="375" height="134.5"/>
+                                        <color key="backgroundColor" white="0.93337673610000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="cancelableIndicatorOnView"/>
+                                        <connections>
+                                            <action selector="cancelableIndicatorOnViewButtonTapped:" destination="0et-ME-W0N" eventType="touchUpInside" id="OU8-Qo-027"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7f1-Jm-R74" firstAttribute="top" secondItem="KCx-JF-pme" secondAttribute="top" id="Bck-tQ-7zo"/>
+                            <constraint firstItem="7f1-Jm-R74" firstAttribute="leading" secondItem="KCx-JF-pme" secondAttribute="leading" id="JKc-wM-vpb"/>
+                            <constraint firstItem="KCx-JF-pme" firstAttribute="bottom" secondItem="7f1-Jm-R74" secondAttribute="bottom" id="dNO-zH-lAb"/>
+                            <constraint firstItem="KCx-JF-pme" firstAttribute="trailing" secondItem="7f1-Jm-R74" secondAttribute="trailing" id="gte-xk-Bto"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KCx-JF-pme"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7PA-Ks-70P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FvO-uQ-oHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="155"/>
+        </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="oNF-Ul-UVv">
+            <objects>
+                <tabBarController id="NLX-sM-DlD" customClass="CustomTabBarController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="68d-RJ-dPW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="q79-Ln-avj" kind="relationship" relationship="viewControllers" id="Htz-dV-SfH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ym1-t0-QfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="156"/>
+        </scene>
+    </scenes>
+</document>
